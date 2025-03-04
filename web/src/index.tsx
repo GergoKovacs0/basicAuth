@@ -4,6 +4,8 @@ import Login from './pages/Login';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
+import ProtectedPage from './pages/ProtectedPage';
+import Navigation from './components/Navigation';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 
@@ -11,8 +13,10 @@ root.render(
     <React.StrictMode>
         <ToastContainer />
         <BrowserRouter>
+            <Navigation />
             <Routes>
                 <Route path="/login" element={<Login />} />
+                <Route path="/protected" element={<ProtectedPage />} />
             </Routes>
         </BrowserRouter>
     </React.StrictMode>,
